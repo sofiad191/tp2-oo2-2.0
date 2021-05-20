@@ -144,7 +144,7 @@ QuestionRetrieverTest >> setUp [
 
 { #category : #testing }
 QuestionRetrieverTest >> testNewsRetrieveQuestions [
-	questionUser2TopicOO2 | 
+	"| questionUser2TopicOO2 | "
 	self
 		assert: (newsRetriever retrieveQuestions: user1) size
 		equals: 1.

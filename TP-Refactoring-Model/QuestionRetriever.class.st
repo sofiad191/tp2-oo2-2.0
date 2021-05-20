@@ -19,7 +19,7 @@ QuestionRetriever >> cuoora: aCuooraInstance [
 
 { #category : #operations }
 QuestionRetriever >> retrieve: aCollection for: aUser [
-	^ ( ( aCollection asSortedCollection: [ :a :b | a positiveVotes > b positiveVotes ] ) last: (100 min: aCollection size) ) reject: [ :q | q user = aUser ]
+	^ ( ( aCollection asSortedCollection: [ :a :b | a positiveVotes size > b positiveVotes size ] ) last: (100 min: aCollection size) ) reject: [ :q | q user = aUser ]
 ]
 
 { #category : #retrieving }
@@ -27,8 +27,8 @@ QuestionRetriever >> retrieveQuestions: aUser [
 ^self subclassResponsibility 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #operations }
 QuestionRetriever >> todayQuestions [
 
-^cuoora select: [ :q | q timestamp asDate = Date today ].
+^cuoora questions select: [ :q | q timestamp asDate = Date today ].
 ]
