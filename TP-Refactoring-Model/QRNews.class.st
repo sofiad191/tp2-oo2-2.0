@@ -6,8 +6,5 @@ Class {
 
 { #category : #retrieving }
 QRNews >> retrieveQuestions: aUser [
-	| newsCol |
-	newsCol := OrderedCollection new.
-	newsCol := self todayQuestions.
-	^ self retrieve: newsCol for: aUser
+	^ self retrieve: (self todayQuestions) for: aUser
 ]
