@@ -46,7 +46,7 @@ CuOOra >> popularQuestions [
 	popularTCol := self todayQuestions.
 	averageVotes := (self questions sum: [ :q | q positiveVotes size ])
 		/ popularTCol size.
-	^ (popularTCol select: [ :q | q positiveVotes size >= averageVotes ])
+	^ popularTCol select: [ :q | q positiveVotes size >= averageVotes ]
 ]
 
 { #category : #accessing }
