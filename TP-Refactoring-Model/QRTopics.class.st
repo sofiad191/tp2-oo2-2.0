@@ -6,8 +6,7 @@ Class {
 
 { #category : #retrieving }
 QRTopics >> retrieveQuestions: aUser [
-	
 	^ self
-		retrieve: (aUser topics flatCollect: [ :topico | topico questions ])
+		retrieve: (aUser questionsFromTopics )
 		for: aUser
 ]

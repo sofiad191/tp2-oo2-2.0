@@ -6,7 +6,7 @@ Class {
 
 { #category : #retrieving }
 QRSocial >> retrieveQuestions: aUser [
-
-	
-	^ self retrieve: (aUser following flatCollect: [ :follow | follow questions ]) for: aUser.
+	^ self
+		retrieve: (aUser questionsFromUsers )
+		for: aUser
 ]

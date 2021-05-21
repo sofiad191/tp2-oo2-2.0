@@ -96,6 +96,16 @@ User >> questions [
 ]
 
 { #category : #accessing }
+User >> questionsFromTopics [
+	^ self topics flatCollect: [ :topico | topico questions ]	
+]
+
+{ #category : #accessing }
+User >> questionsFromUsers [
+	^ self following flatCollect: [ :follower | follower questions ]
+]
+
+{ #category : #accessing }
 User >> questionsOfInterest [
 	^ questionRetriever retrieveQuestions: self.
 ]
