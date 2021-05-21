@@ -6,5 +6,5 @@ Class {
 
 { #category : #retrieving }
 QRNews >> retrieveQuestions: aUser [
-	^ self retrieve: (self todayQuestions) for: aUser
+	^ self retrieve: cuoora todayQuestions for: aUser
 ]

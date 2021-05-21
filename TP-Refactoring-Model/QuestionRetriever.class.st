@@ -26,9 +26,3 @@ QuestionRetriever >> retrieve: aCollection for: aUser [
 QuestionRetriever >> retrieveQuestions: aUser [
 ^self subclassResponsibility 
 ]
-
-{ #category : #operations }
-QuestionRetriever >> todayQuestions [
-
-^cuoora questions select: [ :q | q timestamp asDate = Date today ].
-]
